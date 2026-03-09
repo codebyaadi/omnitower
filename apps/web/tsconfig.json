@@ -1,10 +1,11 @@
 {
   "extends": "@omnitower/typescript-config/nextjs.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "../..",
     "paths": {
-      "@/*": ["./*"],
-      "@omnitower/ui/*": ["../../packages/ui/src/*"]
+      "@/*": ["./apps/web/*"],
+      "@omnitower/ui/*": ["./packages/ui/src/*"],
+      "@api/*": ["./apps/api/src/*"]
     },
     "plugins": [
       {
