@@ -1,0 +1,21 @@
+{
+  "name": "@omnitower/auth",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./server": "./src/server.ts",
+    "./client": "./src/client.ts"
+  },
+  "scripts": {
+    "auth:generate": "bun x auth@latest generate --config src/server.ts --output ../db/src/schema/auth.ts"
+  },
+  "dependencies": {
+    "@omnitower/db": "workspace:*",
+    "better-auth": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "catalog:dev"
+  }
+}

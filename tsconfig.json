@@ -1,0 +1,3 @@
+{
+  "extends": "@omnitower/typescript-config/base.json"
+}

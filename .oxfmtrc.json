@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "endOfLine": "lf",
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "sortImports": {
+    "ignoreCase": true,
+    "newlinesBetween": true
+  },
+  "sortTailwindcss": {
+    "stylesheet": "packages/ui/src/styles/globals.css",
+    "functions": ["cn", "cva"]
+  },
+  "ignorePatterns": [
+    "dist/",
+    "node_modules/",
+    ".next/",
+    ".turbo/",
+    "coverage/",
+    "pnpm-lock.yaml",
+    ".pnpm-store/"
+  ]
+}
