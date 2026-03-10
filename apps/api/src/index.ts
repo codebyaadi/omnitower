@@ -1,23 +1,11 @@
-import { auth } from "@omnitower/auth/server";
 import { Elysia } from "elysia";
 
-const betterAuth = new Elysia({ name: "better-auth" }).macro({
-  auth: {
-    async resolve({ status, request: { headers } }) {
-      const session = await auth.api.getSession({
-        headers,
-      });
-      if (!session) return status(401);
-      return {
-        user: session.user,
-        session: session.session,
-      };
-    },
-  },
-});
+import { investigations } from "./modules/investigation";
+import { betterAuth } from "./plugins/better-auth";
 
 const app = new Elysia()
   .use(betterAuth)
+  .use(investigations)
   .get("/", () => "Hello Elysia")
   .get("/me", ({ user }) => user, {
     auth: true,
