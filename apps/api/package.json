@@ -8,7 +8,11 @@
   },
   "dependencies": {
     "@omnitower/auth": "workspace:*",
-    "elysia": "latest"
+    "@omnitower/db": "workspace:*",
+    "drizzle-orm": "catalog:",
+    "elysia": "latest",
+    "openai": "^6.27.0",
+    "typebox": "^1.1.6"
   },
   "devDependencies": {
     "bun-types": "latest"
